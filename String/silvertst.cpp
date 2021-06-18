@@ -21,14 +21,7 @@ int main(){
 	priority_queue<string> pq;
 	
 	string str = arr[idx];
-	if (str.find("enter"))	cout << "enter";
-	if (arr[idx + 2].find("leave"))	cout << "leave";
-	while(idx > N){
-		string str = arr[idx];
-		
-		
-		
-	}
+	
 
 }
 
