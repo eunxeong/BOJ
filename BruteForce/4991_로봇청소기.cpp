@@ -115,7 +115,6 @@ void Func(int start, int cnt){//idx번이 마지막이고 지금까지 몇개했는지?
 	
 	if (cnt == dcnt){
 		Answer = min(Answer, tmpS);
-//		cout << start << "까지 왔고" << tmpS << endl; 
 		return;
 	}
 	
@@ -124,7 +123,6 @@ void Func(int start, int cnt){//idx번이 마지막이고 지금까지 몇개했는지?
 		
 		checked[i] = true;
 		tmpS += countD(start, i);
-//		cout << start << "에서 " << i << "감" << endl; 
 		Func(i, cnt + 1);
 		tmpS -= countD(start, i);
 		checked[i] = false;
@@ -178,10 +176,6 @@ int main(){
 			checked[i] = true;
 			Func(i, 1);
 			checked[i] = false;
-			
-//			cout << "tmpS : " << tmpS << endl;
-			
-//			Answer = min(tmpS, Answer);
 		}
 		
 		cout << Answer << "\n";

@@ -6,29 +6,6 @@
 using namespace std;
 // 9375 패션왕 신해빈
 
-//void choice(int idx, int cnt, int k){
-//	//지금까지 고른 개수, 골라야할 개수	
-//	if (cnt == k){
-//		int tmp = 1;
-//		for(int i = 0; i < total; i++){
-//			if (ch[i])	tmp *= V[i];
-//		}
-//		 
-//		ans += tmp;
-//		return;
-//	}
-//	
-//	for(int i = idx; i < total; i++){
-//		if (ch[i])	continue;//이미 고른거면 
-//		
-//		ch[i] = true;
-//		choice(i + 1, cnt + 1, k);
-//		ch[i] = false; 
-//		
-//	}
-//	
-//} 조합 일일이 생각할 필요 없고ㅠㅠ 전체 경우의 수에서 아무것도 안입은거만 빼면된다.. 
-
 int main(){
 
 	ios_base::sync_with_stdio(0);
@@ -52,7 +29,7 @@ int main(){
 			ans *= (iter->second + 1);
 		}
 		
-		
+		// 안입은 경우의수도 추가해서 전체 경우의 수 - 아무것도 안입은 경우
 		cout << ans - 1 << "\n";
 		
 	}
