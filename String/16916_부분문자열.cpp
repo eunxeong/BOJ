@@ -1,47 +1,21 @@
 #include <iostream>
 #include <cstring>
+#include <vector>
 
 using namespace std;
 // 16916 부분 문자열
-
-string s1, s2;
-
-bool cmp(int idx){
-	
-	int fin = idx + s2.length();
-	if (fin > s1.length())	return false;
-	
-	for(int i = idx; i < fin; i++){
-		if (s1[i] != s2[i - idx])	return false;
-	}
-	
-	return true;
-}
+// 시간초과! KMP 알고리즘으로 다시 풀기 
  
 int main(){
 
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 	
-	cin >> s1 >> s2;
+	// 실패함수 구현해보기
 	
-	bool flag = false;
-	int start = 0;
-	while(1){
-		
-		int k = s1.find(s2[0], start);
-		
-		if (k == string::npos)	break;
-		
-		if (cmp(k)){
-			flag = true;
-			break;
-		}
-		else	start = k + 1;
+	string s, b;	cin >> s >> b;
 	
-	}
-	
-	if (flag)	cout << 1;
+	if (s.find(b, 0) != string::npos)	cout << 1;
 	else	cout << 0;
 	
 	return 0;
