@@ -15,7 +15,7 @@ public:
         this->title = title;
         this->cnt = cnt;
     }
-    bool operator <(Book &b){
+    bool operator <(Book &b){//이거 그만 까먹자!!
         if (this->cnt == b.cnt) return this->title < b.title;
         return this->cnt > b.cnt;
     }
